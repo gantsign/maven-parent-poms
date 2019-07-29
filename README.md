@@ -9,7 +9,7 @@ company specific.
 <project>
   ...
   <parent>
-    <groupId>com.gantsign.parent</groupId>
+    <groupId>com.github.gantsign.parent</groupId>
     <artifactId>java-parent</artifactId>
     <version>INSERT VERSION HERE</version>
     <relativePath />
@@ -24,7 +24,7 @@ company specific.
 <project>
   ...
   <parent>
-    <groupId>com.gantsign.parent</groupId>
+    <groupId>com.github.gantsign.parent</groupId>
     <artifactId>kotlin-parent</artifactId>
     <version>INSERT VERSION HERE</version>
     <relativePath />
@@ -50,7 +50,7 @@ The installed/deployed POMs are flattened using the
 version of the POM optimised for use as a dependency with any parent POMs inlined and configuration
 only required during the build removed. This feature has to be enabled by adding the following to
 your POM:
-  
+
 ```xml
 <project>
   ...
@@ -60,13 +60,13 @@ your POM:
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>flatten-maven-plugin</artifactId>
-      </plugin>  
+      </plugin>
       ...
     </plugins>
   </build>
   ...
 </project>
-```  
+```
 
 ### Code auto-formatting
 
@@ -76,7 +76,7 @@ This project uses opinionated formatters for Java and Kotlin too avoid
 [google-java-format](https://github.com/google/google-java-format) to format the code. The Kotlin
 parent POM uses the [ktlint-maven-plugin](https://github.com/gantsign/ktlint-maven-plugin) that uses
 [ktlint](https://github.com/pinterest/ktlint) to format the code. The POMs are formatted using the
-[Sortpom Maven Plugin](https://github.com/Ekryd/sortpom). 
+[Sortpom Maven Plugin](https://github.com/Ekryd/sortpom).
 
 ### Code linting
 
@@ -105,7 +105,7 @@ headers to your files. To use this plugin you need to configure it e.g.:
         <configuration>
           <projectName>TODO</projectName>
           <!-- For a list of standard license names run: mvn -N license:license-list -->
-          <!-- For proprietary licenses see 
+          <!-- For proprietary licenses see
                https://www.mojohaus.org/license-maven-plugin/examples/example-add-license.html -->
           <licenseName>TODO e.g. apache_v2</licenseName>
           <extraExtensions>
@@ -142,10 +142,10 @@ headers to your files. To use this plugin you need to configure it e.g.:
       ...
     </plugins>
   </build>
-  
+
   <!-- The inception year is included in the licence header as the copyright year -->
   <inceptionYear>2018</inceptionYear>
-  
+
   <!-- The organization name is included in the licence header as the copyright owner -->
   <organization>
     <name>TODO e.g. ACME LTD</name>
@@ -180,13 +180,13 @@ Out of the box Maven builds can be a bit brittle.
 * If you don't specify the plugin version Maven will default to the latest version. If the latest
   version is buggy or the API breaks compatibility then your build breaks. So it's best to use Maven
   Enforcer to require plugin versions be specified.
-  
+
 * Maven has a bonkers approach to picking between multiple dependency versions. It uses the nearest
   version in the dependency tree. This approach tends to leave you using buggy older dependency
   versions. It also possible that by adding a dependency you may inadvertently downgrade the version
   of another dependency. So it's best to use Maven Enforcer to require the dependency version to be
   specified if there's more than one version and that this be the highest version. This is achieved
-  by specifying the dependency version in the `dependencyManagement` section. 
+  by specifying the dependency version in the `dependencyManagement` section.
 
 * Maven quite happily lets you build with dependencies containing duplicate classes (unless you're
   using Java 9+ modules). Maven has no notion of dependency substitutions e.g. `log4j-over-slf4j`
@@ -194,7 +194,7 @@ Out of the box Maven builds can be a bit brittle.
   It's entirely possible to use one class version in your IDE, one for the build and another at
   runtime. This compromises your tests and can make troubleshooting bugs really difficult. So it's
   best to use Maven Enforcer to ban duplicate classes. This typically requires you to exclude the
-  conflicting transitive dependencies e.g. `log4j`. 
+  conflicting transitive dependencies e.g. `log4j`.
 
 ### Docker
 
@@ -217,13 +217,13 @@ To build your application to your local Docker daemon activate the `docker-local
 
 ```bash
 mvn clean install -P docker-local
-``` 
+```
 
 To build your application to your remote Docker registry activate the `docker-registry` profile e.g:
 
 ```bash
 mvn clean install -P docker-registry
-``` 
+```
 
 ### Managed plugins
 
