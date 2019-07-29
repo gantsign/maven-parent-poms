@@ -940,7 +940,7 @@
                   <groupId>com.h3xstream.findsecbugs</groupId>
                   <artifactId>findsecbugs-plugin</artifactId>
                   <!-- Auto-update to the latest stable -->
-                  <version>LATEST</version>
+                  <version>1.9.0</version>
                 </plugin>
               </plugins>
             </configuration>
