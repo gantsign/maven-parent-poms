@@ -355,3 +355,6 @@ $RECYCLE.BIN/
 
 # Ignore flattened POMs
 .flattened-pom.xml
+
+# Not a Java module
+/.idea/checkstyle-idea.xml
