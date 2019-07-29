@@ -9,7 +9,7 @@ company specific.
 <project>
   ...
   <parent>
-    <groupId>com.gantsign</groupId>
+    <groupId>com.gantsign.parent</groupId>
     <artifactId>java-parent</artifactId>
     <version>INSERT VERSION HERE</version>
     <relativePath />
@@ -24,7 +24,7 @@ company specific.
 <project>
   ...
   <parent>
-    <groupId>com.gantsign</groupId>
+    <groupId>com.gantsign.parent</groupId>
     <artifactId>kotlin-parent</artifactId>
     <version>INSERT VERSION HERE</version>
     <relativePath />
