@@ -253,13 +253,71 @@ To run the security scan run the following from the project root:
 ```bash
 mvn clean install
 mvn spotbugs:spotbugs -P find-sec-bugs
-``` 
+```
 
 To view the results run the following from each Maven module directory:
 
 ```bash
 mvn spotbugs:gui -P find-sec-bugs
-``` 
+```
+
+### Deployment profiles
+
+#### gh-pages
+
+To deploy your Maven site to the `gh-pages` branch of your project repository, first you need to
+configure the `site` in the `distributionManagement` section of your POM:
+
+```xml
+<project>
+  ...
+  <distributionManagement>
+    ...
+    <site>
+      <id>github-pages-site</id>
+      <name>Deployment through Apache Maven SCM Publish Plugin</name>
+      <url>scm:git:https://github.com/TODO_OWNER/TODO_REPO.git</url>
+    </site>
+    ...
+  </distributionManagement>
+  ...
+</project>
+```
+
+Next you need to set the username and access token for the `github` server in your Maven
+`settings.xml`. You can create a token from the
+[Personal access tokens](https://github.com/settings/tokens) page on the users GitHub account. The
+token needs to be granted write permission to the repository. This example uses environment
+variables, which is generally the easiest approach for CI servers:
+
+```xml
+<settings>
+  ...
+  <servers>
+    ...
+    <server>
+      <id>github</id>
+      <username>${env.GITHUB_USER}</username>
+      <password>${env.GITHUB_OAUTH2TOKEN}</password>
+    </server>
+    ...
+  </servers>
+  ...
+</settings>
+```
+
+Deploying the site is a three stage process:
+
+```bash
+# Build the site
+mvn site -P gh-pages
+
+# Prepare the site for upload
+mvn site:stage -P gh-pages
+
+# Upload the site
+mvn scm-publish:publish-scm -P gh-pages
+```
 
 ### Managed plugins
 
@@ -289,6 +347,7 @@ The following plugins have their version specified so builds are reproducible:
 * org.apache.maven.plugins:maven-project-info-reports-plugin
 * org.apache.maven.plugins:maven-release-plugin
 * org.apache.maven.plugins:maven-resources-plugin
+* org.apache.maven.plugins:maven-scm-publish-plugin
 * org.apache.maven.plugins:maven-shade-plugin
 * org.apache.maven.plugins:maven-site-plugin
 * org.apache.maven.plugins:maven-source-plugin
