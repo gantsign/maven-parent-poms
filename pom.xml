@@ -765,7 +765,18 @@
     </license>
   </licenses>
 
-  <developers />
+  <developers>
+    <developer>
+      <name>John Freeman</name>
+      <url>https://github.com/freemanjp</url>
+      <organization>GantSign Ltd.</organization>
+      <organizationUrl>https://github.com/gantsign</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>Europe/London</timezone>
+    </developer>
+  </developers>
 
   <scm>
     <connection>scm:git:https://github.com/gantsign/maven-parent-poms.git</connection>
