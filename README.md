@@ -5,6 +5,8 @@ company-specific.
 
 ## Java
 
+For Java projects add the following to your POM:
+
 ```xml
 <project>
   ...
@@ -15,10 +17,26 @@ company-specific.
     <relativePath />
   </parent>
   ...
+  <!-- Don't inherit license from parent POM -->
+  <licenses>
+    <license>
+      <name>TODO</name>
+    </license>
+  </licenses>
+
+  <!-- Don't inherit developers from parent POM -->
+  <developers>
+    <developer>
+      <name>TODO</name>
+    </developer>
+  </developers>
+  ...
 </project>
 ```
 
 ## Kotlin
+
+For Kotlin projects add the following to your POM:
 
 ```xml
 <project>
@@ -29,6 +47,20 @@ company-specific.
     <version>INSERT VERSION HERE</version>
     <relativePath />
   </parent>
+  ...
+  <!-- Don't inherit license from parent POM -->
+  <licenses>
+    <license>
+      <name>TODO</name>
+    </license>
+  </licenses>
+
+  <!-- Don't inherit developers from parent POM -->
+  <developers>
+    <developer>
+      <name>TODO</name>
+    </developer>
+  </developers>
   ...
 </project>
 ```
