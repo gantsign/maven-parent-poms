@@ -225,6 +225,42 @@ To build your application to your remote Docker registry activate the `docker-re
 mvn clean install -P docker-registry
 ```
 
+### Security scanning
+
+This project includes the [SpotBugs Maven Plugin](https://spotbugs.github.io/spotbugs-maven-plugin)
+with the [Find Security Bugs](https://find-sec-bugs.github.io) plugin for performing static analysis
+on your code. The static analysis can be quite time consuming so it's not run by default.
+
+To add the necessary configuration to your project, run the following from your project root
+directory:
+
+```bash
+mkdir -p config/spotbugs
+
+echo '<FindBugsFilter>
+  <Match>
+    <Bug category="SECURITY"/>
+  </Match>
+</FindBugsFilter>' > config/spotbugs/security-include.xml
+
+echo '<FindBugsFilter>
+</FindBugsFilter>' > config/spotbugs/security-exclude.xml
+
+```
+
+To run the security scan run the following from the project root:
+
+```bash
+mvn clean install
+mvn spotbugs:spotbugs -P find-sec-bugs
+``` 
+
+To view the results run the following from each Maven module directory:
+
+```bash
+mvn spotbugs:gui -P find-sec-bugs
+``` 
+
 ### Managed plugins
 
 The following plugins have their version specified so builds are reproducible:
@@ -232,6 +268,7 @@ The following plugins have their version specified so builds are reproducible:
 * com.coveo:fmt-maven-plugin
 * com.github.ekryd.sortpom:sortpom-maven-plugin
 * com.github.gantsign.maven:ktlint-maven-plugin
+* com.github.spotbugs:spotbugs-maven-plugin
 * com.google.cloud.tools:jib-maven-plugin
 * io.github.zlika:reproducible-build-maven-plugin
 * org.apache.maven.plugins:maven-checkstyle-plugin
