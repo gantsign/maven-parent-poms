@@ -619,6 +619,7 @@
               </ignoredUnusedDeclaredDependencies>
               <ignoredUsedUndeclaredDependencies>
                 <dependency>io.mockk:mockk-dsl-jvm</dependency>
+                <dependency>org.jetbrains:annotations</dependency>
                 <dependency>org.jetbrains.kotlin:kotlin-stdlib</dependency>
                 <dependency>org.jetbrains.kotlin:kotlin-test</dependency>
               </ignoredUsedUndeclaredDependencies>
