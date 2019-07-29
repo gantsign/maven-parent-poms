@@ -263,6 +263,53 @@ mvn spotbugs:gui -P find-sec-bugs
 
 ### Deployment profiles
 
+#### sign-artifacts
+
+To sign artifacts first you need a GPG key, if you're using Travis CI you can follow
+[this guide](http://www.debonair.io/post/maven-cd/).
+
+Once you have your GPG key you need to set the following two environnement variables:
+
+* `GPG_KEY_NAME` e.g. name@example.com
+* `GPG_PASSPHRASE`
+
+Then activate the `sign-artifacts` profile when you deploy your artifacts e.g.:
+
+```bash
+mvn deploy -P sign-artifacts
+```
+
+#### ossrh-deploy
+
+The process of deploying to Sonatype OSSRH (OSS Repository Hosting) is a bit involved so play close
+attention to [this guide](https://central.sonatype.org/pages/ossrh-guide.html).
+
+You need to specify the username and token for the `ossrh` server in your Maven `settings.xml`. This
+example uses environment variables, which is generally the easiest approach for CI servers:
+
+```xml
+<settings>
+  ...
+  <servers>
+    ...
+    <server>
+      <id>ossrh</id>
+      <username>${env.OSSRH_USER}</username>
+      <password>${env.OSSRH_TOKEN}</password>
+    </server>
+    ...
+  </servers>
+  ...
+</settings>
+```
+
+Once you've satisfied all the requirements you can deploy to OSSRH by activating the `ossrh-deploy`
+profile e.g.:
+
+```bash
+mvn deploy -P sign-artifacts,ossrh-deploy
+```
+
 #### gh-pages
 
 To deploy your Maven site to the `gh-pages` branch of your project repository, first you need to
