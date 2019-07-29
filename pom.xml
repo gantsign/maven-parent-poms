@@ -87,14 +87,34 @@
         <version>${jsr305.version}</version>
       </dependency>
       <dependency>
+        <groupId>com.google.errorprone</groupId>
+        <artifactId>error_prone_core</artifactId>
+        <version>${error-prone.version}</version>
+      </dependency>
+      <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
         <version>${guava.version}</version>
       </dependency>
       <dependency>
+        <groupId>com.puppycrawl.tools</groupId>
+        <artifactId>checkstyle</artifactId>
+        <version>${checkstyle.version}</version>
+      </dependency>
+      <dependency>
         <groupId>io.github.microutils</groupId>
         <artifactId>kotlin-logging</artifactId>
         <version>${kotlin-logging.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>extra-enforcer-rules</artifactId>
+        <version>${extra-enforcer-rules.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.codehaus.plexus</groupId>
+        <artifactId>plexus-compiler-javac-errorprone</artifactId>
+        <version>${plexus-compiler-javac-errorprone.version}</version>
       </dependency>
       <dependency>
         <groupId>org.jetbrains</groupId>
