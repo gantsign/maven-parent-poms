@@ -13,7 +13,7 @@ gpg --fast-import .travis/codesigning.asc
 
 ./mvnw deploy \
     --settings .travis/settings.xml \
-    -P publish-artifacts \
+    -P sign-artifacts,ossrh-deploy \
     -DskipTests \
     --batch-mode \
     --show-version
