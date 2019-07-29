@@ -1,7 +1,7 @@
 # GantSign Maven Parent POMs
 
 Parent Maven POMs with best practice configuration. The POMs are for general use and are not
-company specific.
+company-specific.
 
 ## Java
 
@@ -268,7 +268,7 @@ mvn spotbugs:gui -P find-sec-bugs
 To sign artifacts first you need a GPG key, if you're using Travis CI you can follow
 [this guide](http://www.debonair.io/post/maven-cd/).
 
-Once you have your GPG key you need to set the following two environnement variables:
+Once you have your GPG key you need to set the following two environment variables:
 
 * `GPG_KEY_NAME` e.g. name@example.com
 * `GPG_PASSPHRASE`
