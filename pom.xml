@@ -31,7 +31,7 @@
     <guava.version>28.0-jre</guava.version>
     <jacoco-maven-plugin.version>0.8.4</jacoco-maven-plugin.version>
     <jacoco.class.minimum-coverage-ratio>0.75</jacoco.class.minimum-coverage-ratio>
-    <java.max-version>1.9</java.max-version>
+    <java.below-version>1.9</java.below-version>
     <java.version>1.8</java.version>
     <jdepend-maven-plugin.version>2.0</jdepend-maven-plugin.version>
     <jib-maven-plugin.version>1.4.0</jib-maven-plugin.version>
@@ -643,7 +643,7 @@
                   <version>[3.5.4,3.7)</version>
                 </requireMavenVersion>
                 <requireJavaVersion>
-                  <version>[${java.version},${java.max-version})</version>
+                  <version>[${java.version},${java.below-version})</version>
                 </requireJavaVersion>
                 <!-- When there are multiple versions of a dependency you have to choose which one to use. -->
                 <dependencyConvergence />
@@ -874,7 +874,7 @@
                       <version>[3.5.4,3.7)</version>
                     </requireMavenVersion>
                     <requireJavaVersion>
-                      <version>[${java.version},${java.max-version})</version>
+                      <version>[${java.version},${java.below-version})</version>
                     </requireJavaVersion>
                     <!-- When there are multiple versions of a dependency you have to choose which one to use. -->
                     <dependencyConvergence />
