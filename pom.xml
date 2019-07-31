@@ -305,9 +305,6 @@
           <configuration>
             <to>
               <image>${docker.image}:${project.version}</image>
-              <tags>
-                <tag>dev</tag>
-              </tags>
             </to>
           </configuration>
         </plugin>
@@ -956,6 +953,14 @@
           <plugin>
             <groupId>com.google.cloud.tools</groupId>
             <artifactId>jib-maven-plugin</artifactId>
+            <configuration>
+              <to>
+                <image>${docker.image}:${project.version}</image>
+                <tags>
+                  <tag>latest</tag>
+                </tags>
+              </to>
+            </configuration>
             <executions>
               <execution>
                 <id>docker-local</id>
