@@ -65,6 +65,25 @@ For Kotlin projects add the following to your POM:
 </project>
 ```
 
+### Configuration
+
+#### Java 11
+
+Java 8 is required by default. To compile with Java 11 add the following configuration to your POM:
+
+```xml
+<project>
+  ...
+  <properties>
+    ...
+    <java.below-version>12</java.below-version>
+    <java.version>11</java.version>
+    ...
+  </properties>
+  ...
+</project>
+```
+
 ## Features
 
 ### Reproducible builds
