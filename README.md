@@ -1,5 +1,9 @@
 # GantSign Maven Parent POMs
 
+[![Build Status](https://travis-ci.com/gantsign/maven-parent-poms.svg?branch=master)](https://travis-ci.com/gantsign/maven-parent-poms)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.gantsign.parent/common-parent/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.gantsign.parent/common-parent)
+[![License](https://img.shields.io/github/license/gantsign/maven-parent-poms)](https://github.com/gantsign/maven-parent-poms/blob/master/LICENSE)
+
 Parent Maven POMs with best practice configuration. The POMs are for general use and are not
 company-specific.
 
