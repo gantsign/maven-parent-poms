@@ -408,10 +408,10 @@ Deploying the site is a three stage process:
 
 ```bash
 # Build the site
-mvn site -P gh-pages
+mvn site
 
 # Prepare the site for upload
-mvn site:stage -P gh-pages
+mvn site:stage
 
 # Upload the site
 mvn scm-publish:publish-scm -P gh-pages
