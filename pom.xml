@@ -73,7 +73,7 @@
     <plexus-compiler-javac-errorprone.version>2.8.5</plexus-compiler-javac-errorprone.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <reproducible-build-maven-plugin.version>0.10</reproducible-build-maven-plugin.version>
+    <reproducible-build-maven-plugin.version>0.11</reproducible-build-maven-plugin.version>
     <slf4j.version>1.7.28</slf4j.version>
     <sortpom-maven-plugin.version>2.10.0</sortpom-maven-plugin.version>
     <spotbugs-maven-plugin.version>3.1.12.2</spotbugs-maven-plugin.version>
