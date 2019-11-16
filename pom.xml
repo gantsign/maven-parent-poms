@@ -34,7 +34,7 @@
     <java.below-version>9</java.below-version>
     <java.version>1.8</java.version>
     <jdepend-maven-plugin.version>2.0</jdepend-maven-plugin.version>
-    <jib-maven-plugin.version>1.7.0</jib-maven-plugin.version>
+    <jib-maven-plugin.version>1.8.0</jib-maven-plugin.version>
     <jsr305.version>3.0.2</jsr305.version>
     <junit-jupiter.version>5.5.2</junit-jupiter.version>
     <junit.version>4.12</junit.version>
