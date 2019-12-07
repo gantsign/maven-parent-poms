@@ -46,6 +46,13 @@
                 <forceJavacCompilerUse>true</forceJavacCompilerUse>
                 <showDeprecation>true</showDeprecation>
                 <showWarnings>true</showWarnings>
+                <annotationProcessorPaths>
+                  <path>
+                    <groupId>org.mockito</groupId>
+                    <artifactId>mockito-errorprone</artifactId>
+                    <version>${mockito.version}</version>
+                  </path>
+                </annotationProcessorPaths>
               </configuration>
               <dependencies>
                 <!-- override plexus-compiler-javac-errorprone's dependency on
