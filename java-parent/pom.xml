@@ -60,6 +60,11 @@
                   <artifactId>plexus-compiler-javac-errorprone</artifactId>
                   <version>${plexus-compiler-javac-errorprone.version}</version>
                 </dependency>
+                <dependency>
+                  <groupId>org.mockito</groupId>
+                  <artifactId>mockito-errorprone</artifactId>
+                  <version>${mockito.version}</version>
+                </dependency>
               </dependencies>
             </plugin>
           </plugins>
