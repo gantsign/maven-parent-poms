@@ -184,6 +184,13 @@
         <scope>runtime</scope>
       </dependency>
       <dependency>
+        <groupId>org.junit</groupId>
+        <artifactId>junit-bom</artifactId>
+        <version>${junit-jupiter.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
         <groupId>io.mockk</groupId>
         <artifactId>mockk</artifactId>
         <version>${mockk.version}</version>
@@ -229,18 +236,6 @@
         <groupId>org.jetbrains.kotlin</groupId>
         <artifactId>kotlin-test-junit</artifactId>
         <version>${kotlin.version}</version>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-api</artifactId>
-        <version>${junit-jupiter.version}</version>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-engine</artifactId>
-        <version>${junit-jupiter.version}</version>
         <scope>test</scope>
       </dependency>
       <dependency>
