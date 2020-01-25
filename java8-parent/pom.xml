@@ -9,15 +9,14 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <artifactId>java-parent</artifactId>
+  <artifactId>java8-parent</artifactId>
   <packaging>pom</packaging>
 
-  <name>Java Parent</name>
-  <description>Parent for Java projects</description>
+  <name>Java 8 Parent</name>
+  <description>Parent for Java 8 projects</description>
 
   <properties>
-    <java.version>11</java.version>
-    <requireJavaVersion>${java.version}</requireJavaVersion>
+    <javac.version>9+181-r4173-1</javac.version>
   </properties>
 
   <build>
@@ -32,11 +31,21 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-enforcer-plugin</artifactId>
+        <artifactId>maven-invoker-plugin</artifactId>
         <inherited>false</inherited>
         <configuration>
-          <skip>true</skip>
+          <cloneProjectsTo>${project.build.directory}/it</cloneProjectsTo>
+          <streamLogs>true</streamLogs>
         </configuration>
+        <executions>
+          <execution>
+            <id>integration-test</id>
+            <goals>
+              <goal>install</goal>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
@@ -55,10 +64,12 @@
               <artifactId>maven-compiler-plugin</artifactId>
               <version>${maven-compiler-plugin.version}</version>
               <configuration>
+                <fork>true</fork>
                 <compilerArgs>
                   <arg>-XDcompilePolicy=simple</arg>
                   <!-- Suppress UnusedVariable check until https://github.com/google/error-prone/issues/1266 is fixed -->
                   <arg>-Xplugin:ErrorProne -Xep:UnusedVariable:OFF</arg>
+                  <arg>-J-Xbootclasspath/p:${settings.localRepository}/com/google/errorprone/javac/${javac.version}/javac-${javac.version}.jar</arg>
                 </compilerArgs>
                 <showDeprecation>true</showDeprecation>
                 <showWarnings>true</showWarnings>

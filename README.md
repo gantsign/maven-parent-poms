@@ -7,9 +7,40 @@
 Parent Maven POMs with best practice configuration. The POMs are for general use and are not
 company-specific.
 
-## Java
+## Java 8
 
-For Java projects add the following to your POM:
+For Java 8 projects add the following to your POM:
+
+```xml
+<project>
+  ...
+  <parent>
+    <groupId>com.github.gantsign.parent</groupId>
+    <artifactId>java8-parent</artifactId>
+    <version>INSERT VERSION HERE</version>
+    <relativePath />
+  </parent>
+  ...
+  <!-- Don't inherit license from parent POM -->
+  <licenses>
+    <license>
+      <name>TODO</name>
+    </license>
+  </licenses>
+
+  <!-- Don't inherit developers from parent POM -->
+  <developers>
+    <developer>
+      <name>TODO</name>
+    </developer>
+  </developers>
+  ...
+</project>
+```
+
+## Java 11
+
+For Java 11 projects add the following to your POM:
 
 ```xml
 <project>
@@ -69,31 +100,13 @@ For Kotlin projects add the following to your POM:
 </project>
 ```
 
-### Configuration
-
-#### Java 11
-
-Java 8 is required by default. To compile with Java 11 add the following configuration to your POM:
-
-```xml
-<project>
-  ...
-  <properties>
-    ...
-    <java.below-version>12</java.below-version>
-    <java.version>11</java.version>
-    ...
-  </properties>
-  ...
-</project>
-```
-
 ## Features
 
 ### Project Lombok support
 
 You can use Lombok to reduce the boilerplate in your Java projects. To enable Lombok you need to
-add Lombok as a provided dependency in your `pom.xml` as follows:
+add Lombok as a provided dependency and add it to the `annotationProcessorPaths` in your `pom.xml`
+as follows:
 
 ```xml
 <project>
@@ -107,6 +120,26 @@ add Lombok as a provided dependency in your `pom.xml` as follows:
     </dependency>
     ...
   </dependencies>
+
+  <build>
+    <plugins>
+      ...
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <annotationProcessorPaths combine.children="append">
+            <path>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+              <version>${lombok.version}</version>
+            </path>
+          </annotationProcessorPaths>
+        </configuration>
+      </plugin>
+      ...
+    </plugins>
+  </build>
   ...
 </project>
 ```
