@@ -12,6 +12,7 @@
 
   <modules>
     <module>java-parent</module>
+    <module>java8-parent</module>
     <module>kotlin-parent</module>
   </modules>
 
@@ -31,7 +32,6 @@
     <guava.version>28.2-jre</guava.version>
     <jacoco-maven-plugin.version>0.8.5</jacoco-maven-plugin.version>
     <jacoco.file.minimum-coverage-ratio>0.75</jacoco.file.minimum-coverage-ratio>
-    <java.below-version>9</java.below-version>
     <java.version>1.8</java.version>
     <jdepend-maven-plugin.version>2.0</jdepend-maven-plugin.version>
     <jib-maven-plugin.version>1.8.0</jib-maven-plugin.version>
@@ -74,6 +74,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <reproducible-build-maven-plugin.version>0.11</reproducible-build-maven-plugin.version>
+    <requireJavaVersion>[${java.version},9)</requireJavaVersion>
     <revision>development-SNAPSHOT</revision>
     <slf4j.version>1.7.30</slf4j.version>
     <sortpom-maven-plugin.version>2.10.0</sortpom-maven-plugin.version>
@@ -609,7 +610,7 @@
                   <version>[3.5.4,3.7)</version>
                 </requireMavenVersion>
                 <requireJavaVersion>
-                  <version>[${java.version},${java.below-version})</version>
+                  <version>${requireJavaVersion}</version>
                 </requireJavaVersion>
                 <!-- When there are multiple versions of a dependency you have to choose which one to use. -->
                 <dependencyConvergence />
