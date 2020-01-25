@@ -821,6 +821,7 @@
         <jdk>[9,)</jdk>
       </activation>
       <properties>
+        <jdeps.multiRelease>${java.target.version}</jdeps.multiRelease>
         <maven.compiler.release>${java.target.version}</maven.compiler.release>
       </properties>
     </profile>
