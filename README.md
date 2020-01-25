@@ -90,6 +90,38 @@ Java 8 is required by default. To compile with Java 11 add the following configu
 
 ## Features
 
+### Project Lombok support
+
+You can use Lombok to reduce the boilerplate in your Java projects. To enable Lombok you need to
+add Lombok as a provided dependency in your `pom.xml` as follows:
+
+```xml
+<project>
+  ...
+  <dependencies>
+    ...
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    ...
+  </dependencies>
+  ...
+</project>
+```
+
+You should also add a `lombok.config` file to the root of your project, the following config is
+a good start:
+
+```lombok.config
+# This is the root config for this project
+config.stopBubbling = true
+
+# No need for test coverage on Lombok generated code with JaCoCo
+lombok.addLombokGeneratedAnnotation = true
+```
+
 ### Reproducible builds
 
 The builds are made reproducible using the
