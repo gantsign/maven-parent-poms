@@ -303,11 +303,11 @@
           </dependencies>
           <executions>
             <execution>
-              <id>validate</id>
+              <id>verify</id>
               <goals>
                 <goal>check</goal>
               </goals>
-              <phase>validate</phase>
+              <phase>verify</phase>
               <configuration>
                 <configLocation>${checkstyle.config-location}</configLocation>
                 <encoding>${project.build.sourceEncoding}</encoding>
