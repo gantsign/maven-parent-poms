@@ -50,7 +50,7 @@
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
     <maven-dependency-plugin.version>3.1.1</maven-dependency-plugin.version>
     <maven-deploy-plugin.version>3.0.0-M1</maven-deploy-plugin.version>
-    <maven-enforcer-plugin.version>1.4.1</maven-enforcer-plugin.version>
+    <maven-enforcer-plugin.version>3.0.0-M3</maven-enforcer-plugin.version>
     <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
     <maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
     <maven-invoker-plugin.version>3.2.1</maven-invoker-plugin.version>
@@ -809,70 +809,8 @@
         <jdk>[9,)</jdk>
       </activation>
       <properties>
-        <maven-enforcer-plugin.version>3.0.0-M2</maven-enforcer-plugin.version>
         <maven.compiler.release>${java.version}</maven.compiler.release>
       </properties>
-
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-enforcer-plugin</artifactId>
-            <executions>
-              <execution>
-                <id>enforce-versions</id>
-                <goals>
-                  <goal>enforce</goal>
-                </goals>
-                <configuration>
-                  <rules>
-                    <requireMavenVersion>
-                      <version>[3.5.4,3.7)</version>
-                    </requireMavenVersion>
-                    <requireJavaVersion>
-                      <version>[${java.version},${java.below-version})</version>
-                    </requireJavaVersion>
-                    <!-- When there are multiple versions of a dependency you have to choose which one to use. -->
-                    <dependencyConvergence />
-                    <requireReleaseDeps>
-                      <message>No Snapshots Allowed!</message>
-                      <failWhenParentIsSnapshot>false</failWhenParentIsSnapshot>
-                    </requireReleaseDeps>
-                    <!-- When there are multiple versions of a dependency you have to choose the maximum version. -->
-                    <requireUpperBoundDeps />
-
-                    <!-- Temporally disabled due to https://issues.apache.org/jira/browse/MENFORCER-306 -->
-                    <!--<requirePluginVersions>-->
-                    <!--<message>Best Practice is to always define plugin versions!</message>-->
-                    <!--<banLatest>true</banLatest>-->
-                    <!--<banRelease>true</banRelease>-->
-                    <!--<banSnapshots>true</banSnapshots>-->
-                    <!--<phases>clean,deploy,site</phases>-->
-                    <!--<additionalPlugins>-->
-                    <!--<additionalPlugin>org.apache.maven.plugins:maven-javadoc-plugin</additionalPlugin>-->
-                    <!--<additionalPlugin>org.apache.maven.plugins:maven-release-plugin</additionalPlugin>-->
-                    <!--<additionalPlugin>org.apache.maven.plugins:maven-source-plugin</additionalPlugin>-->
-                    <!--</additionalPlugins>-->
-                    <!--</requirePluginVersions>-->
-                    <bannedPlugins>
-                      <excludes>
-                        <exclude>org.apache.maven.plugins:maven-verifier-plugin</exclude>
-                      </excludes>
-                      <message>Please consider using the maven-invoker-plugin (http://maven.apache.org/plugins/maven-invoker-plugin/)!</message>
-                    </bannedPlugins>
-                    <requireNoRepositories>
-                      <message>Best Practice is to never define repositories in pom.xml (use a repository manager instead)</message>
-                    </requireNoRepositories>
-                    <banDuplicateClasses>
-                      <findAllDuplicates>true</findAllDuplicates>
-                    </banDuplicateClasses>
-                  </rules>
-                </configuration>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
     </profile>
 
     <profile>
