@@ -640,6 +640,7 @@
                 </requireNoRepositories>
                 <banDuplicateClasses>
                   <findAllDuplicates>true</findAllDuplicates>
+                  <ignoreWhenIdentical>true</ignoreWhenIdentical>
                 </banDuplicateClasses>
               </rules>
             </configuration>
