@@ -16,8 +16,8 @@
   <description>Parent for Java projects</description>
 
   <properties>
-    <java.version>11</java.version>
-    <requireJavaVersion>${java.version}</requireJavaVersion>
+    <java.target.version>11</java.target.version>
+    <requireJavaVersion>${java.target.version}</requireJavaVersion>
   </properties>
 
   <build>
