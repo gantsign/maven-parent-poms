@@ -919,6 +919,10 @@
                 <goals>
                   <goal>attach-descriptor</goal>
                 </goals>
+                <configuration>
+                  <!-- Workaround for !404 requesting site_en.xml https://stackoverflow.com/a/51912311 -->
+                  <locales>en,de</locales>
+                </configuration>
               </execution>
             </executions>
           </plugin>
