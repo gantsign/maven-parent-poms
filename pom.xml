@@ -28,7 +28,7 @@
     <error-prone.version>2.4.0</error-prone.version>
     <extra-enforcer-rules.version>1.2</extra-enforcer-rules.version>
     <flatten-maven-plugin.version>1.2.2</flatten-maven-plugin.version>
-    <fmt-maven-plugin.version>2.9</fmt-maven-plugin.version>
+    <fmt-maven-plugin.version>2.10</fmt-maven-plugin.version>
     <guava.version>29.0-jre</guava.version>
     <jacoco-maven-plugin.version>0.8.5</jacoco-maven-plugin.version>
     <jacoco.file.minimum-coverage-ratio>0.75</jacoco.file.minimum-coverage-ratio>
@@ -798,6 +798,17 @@
   </distributionManagement>
 
   <profiles>
+
+    <profile>
+      <id>pre-java-11</id>
+      <activation>
+        <jdk>[,11)</jdk>
+      </activation>
+      <properties>
+        <fmt-maven-plugin.version>2.9.1</fmt-maven-plugin.version>
+      </properties>
+    </profile>
+
     <profile>
       <id>pre-java-9</id>
       <activation>
