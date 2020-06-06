@@ -798,6 +798,17 @@
   </distributionManagement>
 
   <profiles>
+
+    <profile>
+      <id>pre-java-11</id>
+      <activation>
+        <jdk>[,11)</jdk>
+      </activation>
+      <properties>
+        <fmt-maven-plugin.version>2.9.1</fmt-maven-plugin.version>
+      </properties>
+    </profile>
+
     <profile>
       <id>pre-java-9</id>
       <activation>
