@@ -20,7 +20,7 @@
     <annotations.version>19.0.0</annotations.version>
     <assertj-guava.version>3.4.0</assertj-guava.version>
     <assertj.version>3.16.1</assertj.version>
-    <build-helper-maven-plugin.version>3.1.0</build-helper-maven-plugin.version>
+    <build-helper-maven-plugin.version>3.2.0</build-helper-maven-plugin.version>
     <checkstyle.config-location>https://raw.githubusercontent.com/gantsign/checkstyle-config/3.3.0/checkstyle.xml</checkstyle.config-location>
     <checkstyle.failsOnError>true</checkstyle.failsOnError>
     <checkstyle.version>8.33</checkstyle.version>
