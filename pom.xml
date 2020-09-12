@@ -39,7 +39,7 @@
     <jsr305.version>3.0.2</jsr305.version>
     <junit-jupiter.version>5.6.2</junit-jupiter.version>
     <junit.version>4.13</junit.version>
-    <kotlin-logging.version>1.8.3</kotlin-logging.version>
+    <kotlin-logging.version>1.10.7</kotlin-logging.version>
     <kotlin.compiler.jvmTarget>${java.target.version}</kotlin.compiler.jvmTarget>
     <kotlin.version>1.4.0</kotlin.version>
     <ktlint-maven-plugin.version>1.6.1</ktlint-maven-plugin.version>
