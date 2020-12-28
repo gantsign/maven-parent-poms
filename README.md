@@ -1,6 +1,6 @@
 # GantSign Maven Parent POMs
 
-[![Build Status](https://travis-ci.com/gantsign/maven-parent-poms.svg?branch=master)](https://travis-ci.com/gantsign/maven-parent-poms)
+[![Release](https://github.com/gantsign/maven-parent-poms/workflows/Build/badge.svg)](https://github.com/gantsign/maven-parent-poms/actions?query=workflow%3ABuild)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.gantsign.parent/common-parent/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.gantsign.parent/common-parent)
 [![License](https://img.shields.io/github/license/gantsign/maven-parent-poms)](https://github.com/gantsign/maven-parent-poms/blob/master/LICENSE)
 
