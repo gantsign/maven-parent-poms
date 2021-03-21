@@ -68,7 +68,11 @@
                 <compilerArgs>
                   <arg>-XDcompilePolicy=simple</arg>
                   <!-- Suppress UnusedVariable check until https://github.com/google/error-prone/issues/1266 is fixed -->
-                  <arg>-Xplugin:ErrorProne -Xep:UnusedVariable:OFF</arg>
+                  <!-- Suppress SameNameButDifferent check until https://github.com/google/error-prone/issues/2120 is fixed -->
+                  <!-- Suppress ReferenceEquality check until https://github.com/google/error-prone/issues/447 is fixed -->
+                  <!-- Suppress ParameterName check until https://github.com/google/error-prone/issues/780 is fixed -->
+                  <!-- Suppress MissingSummary check until https://github.com/google/error-prone/issues/1444 is fixed -->
+                  <arg>-Xplugin:ErrorProne -Xep:UnusedVariable:OFF -Xep:SameNameButDifferent:OFF -Xep:ReferenceEquality:OFF -Xep:ParameterName:OFF -Xep:MissingSummary:OFF -XepDisableWarningsInGeneratedCode</arg>
                   <arg>-J-Xbootclasspath/p:${settings.localRepository}/com/google/errorprone/javac/${javac.version}/javac-${javac.version}.jar</arg>
                 </compilerArgs>
                 <showDeprecation>true</showDeprecation>
