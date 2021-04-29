@@ -1,0 +1,26 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: weekly
+    day: saturday
+  open-pull-requests-limit: 10
+  assignees:
+  - freemanjp
+  ignore:
+  - dependency-name: com.h3xstream.findsecbugs:findsecbugs-plugin
+    versions:
+    - "> LATEST"
+  - dependency-name: org.assertj:assertj-core
+    versions:
+    - ">= 3.13.0.a, < 3.13.1"
+  - dependency-name: org.assertj:assertj-core
+    versions:
+    - ">= 3.13.1.a, < 3.13.2"
+  - dependency-name: org.projectlombok:lombok
+    versions:
+    - 1.18.18
+  - dependency-name: io.github.microutils:kotlin-logging
+    versions:
+    - 2.0.5
