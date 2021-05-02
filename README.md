@@ -534,7 +534,7 @@ The following dependencies have their version specified for convenience:
 
 * com.google.code.findbugs:jsr305
 * com.google.guava:guava
-* io.github.microutils:kotlin-logging
+* io.github.microutils:kotlin-logging-jvm
 * org.jetbrains:annotations
 * org.jetbrains.kotlin:kotlin-compiler-embeddable
 * org.jetbrains.kotlin:kotlin-reflect
