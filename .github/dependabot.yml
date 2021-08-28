@@ -12,3 +12,6 @@ updates:
   - dependency-name: com.h3xstream.findsecbugs:findsecbugs-plugin
     versions:
     - "> LATEST"
+  - dependency-name: org.apache.maven.plugins:maven-dependency-plugin
+    versions:
+    - 3.2.0
