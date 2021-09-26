@@ -29,7 +29,7 @@
     <extra-enforcer-rules.version>1.4</extra-enforcer-rules.version>
     <flatten-maven-plugin.version>1.2.7</flatten-maven-plugin.version>
     <fmt-maven-plugin.version>2.12</fmt-maven-plugin.version>
-    <guava.version>30.1.1-jre</guava.version>
+    <guava.version>31.0-jre</guava.version>
     <jacoco-maven-plugin.version>0.8.7</jacoco-maven-plugin.version>
     <jacoco.file.minimum-coverage-ratio>0.75</jacoco.file.minimum-coverage-ratio>
     <java.require.version>[${java.target.version},9)</java.require.version>
