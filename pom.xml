@@ -403,6 +403,8 @@
           <configuration>
             <autoVersionSubmodules>true</autoVersionSubmodules>
             <tagNameFormat>@{project.version}</tagNameFormat>
+            <preparationGoals>clean sortpom:sort install</preparationGoals>
+            <completionGoals>sortpom:sort</completionGoals>
           </configuration>
         </plugin>
         <plugin>
@@ -599,13 +601,13 @@
                   <version>${java.require.version}</version>
                 </requireJavaVersion>
                 <!-- When there are multiple versions of a dependency you have to choose which one to use. -->
-                <dependencyConvergence />
+                <dependencyConvergence/>
                 <requireReleaseDeps>
                   <message>No Snapshots Allowed!</message>
                   <failWhenParentIsSnapshot>false</failWhenParentIsSnapshot>
                 </requireReleaseDeps>
                 <!-- When there are multiple versions of a dependency you have to choose the maximum version. -->
-                <requireUpperBoundDeps />
+                <requireUpperBoundDeps/>
                 <requirePluginVersions>
                   <message>Best Practice is to always define plugin versions!</message>
                   <banLatest>true</banLatest>
