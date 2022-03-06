@@ -16,6 +16,8 @@
   <description>Parent for Java 8 projects</description>
 
   <properties>
+    <java.require.version>[${java.target.version},9)</java.require.version>
+    <java.target.version>1.8</java.target.version>
     <javac.version>9+181-r4173-1</javac.version>
   </properties>
 
@@ -50,4 +52,16 @@
     </plugins>
   </build>
 
+  <profiles>
+    <profile>
+      <id>post-java-9</id>
+      <activation>
+        <jdk>[9,)</jdk>
+      </activation>
+      <properties>
+        <jdeps.multiRelease>9</jdeps.multiRelease>
+        <maven.compiler.release>8</maven.compiler.release>
+      </properties>
+    </profile>
+  </profiles>
 </project>

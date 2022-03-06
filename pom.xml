@@ -32,8 +32,7 @@
     <guava.version>31.1-jre</guava.version>
     <jacoco-maven-plugin.version>0.8.7</jacoco-maven-plugin.version>
     <jacoco.file.minimum-coverage-ratio>0.75</jacoco.file.minimum-coverage-ratio>
-    <java.require.version>[${java.target.version},9)</java.require.version>
-    <java.target.version>1.8</java.target.version>
+    <java.target.version>11</java.target.version>
     <jdepend-maven-plugin.version>2.0</jdepend-maven-plugin.version>
     <jib-maven-plugin.version>3.2.0</jib-maven-plugin.version>
     <jsr305.version>3.0.2</jsr305.version>
@@ -597,9 +596,6 @@
                 <requireMavenVersion>
                   <version>[3.5.4,3.7)</version>
                 </requireMavenVersion>
-                <requireJavaVersion>
-                  <version>${java.require.version}</version>
-                </requireJavaVersion>
                 <!-- When there are multiple versions of a dependency you have to choose which one to use. -->
                 <dependencyConvergence/>
                 <requireReleaseDeps>
@@ -823,6 +819,41 @@
         <jdeps.multiRelease>${java.target.version}</jdeps.multiRelease>
         <maven.compiler.release>${java.target.version}</maven.compiler.release>
       </properties>
+    </profile>
+
+    <profile>
+      <id>enforce-java-version</id>
+      <activation>
+        <property>
+          <name>!enforce.java-version.skip</name>
+        </property>
+      </activation>
+      <properties>
+        <java.require.version>${java.target.version}</java.require.version>
+      </properties>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-enforcer-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>enforce-java-version</id>
+                <goals>
+                  <goal>enforce</goal>
+                </goals>
+                <configuration>
+                  <rules>
+                    <requireJavaVersion>
+                      <version>${java.require.version}</version>
+                    </requireJavaVersion>
+                  </rules>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
     </profile>
 
     <profile>

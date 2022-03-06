@@ -8,5 +8,6 @@ set +x
     -P attach-site-descriptor,sign-artifacts,ossrh-deploy \
     -DskipTests \
     -Dinvoker.skip=true \
+    -Denforce.java-version.skip \
     --batch-mode \
     --show-version
