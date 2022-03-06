@@ -15,6 +15,11 @@
   <name>Kotlin Parent</name>
   <description>Parent for Kotlin projects</description>
 
+  <properties>
+    <java.require.version>[${java.target.version},9)</java.require.version>
+    <java.target.version>1.8</java.target.version>
+  </properties>
+
   <build>
     <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
     <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>

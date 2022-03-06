@@ -3,6 +3,7 @@ import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+/** Example class. */
 @Slf4j
 @RequiredArgsConstructor
 public class Example {
@@ -13,6 +14,7 @@ public class Example {
         log.info("msg");
     }
 
+    /** Example bean. */
     @Data
     @Builder
     public static class ExampleBean {

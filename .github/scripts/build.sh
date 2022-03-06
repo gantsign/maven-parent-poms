@@ -2,4 +2,4 @@
 
 set -e
 
-./mvnw install --batch-mode --show-version
+./mvnw install --batch-mode --show-version -Denforce.java-version.skip

@@ -23,7 +23,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v1
         with:
-          java-version: '1.8'
+          java-version: '11'
       - name: Build with Maven
         run: .github/scripts/build.sh
 
@@ -37,7 +37,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v1
         with:
-          java-version: '1.8'
+          java-version: '11'
       - name: Install GPG key
         run: |-
           gpg --batch --import-options import-show --import << EOF
