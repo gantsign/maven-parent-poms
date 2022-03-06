@@ -9,17 +9,25 @@ company-specific.
 
 ## Java 8
 
-For Java 8 projects add the following to your POM:
+Due to some of the Maven plugins we use requiring Java 11 to run, you need to
+build on Java 11 to compile for Java 8.
+
+Add the following to your POM:
 
 ```xml
 <project>
   ...
   <parent>
     <groupId>com.github.gantsign.parent</groupId>
-    <artifactId>java8-parent</artifactId>
+    <artifactId>java-parent</artifactId>
     <version>INSERT VERSION HERE</version>
     <relativePath />
   </parent>
+  ...
+  <properties>
+    <java.require.version>11</java.require.version>
+    <java.target.version>8</java.target.version>
+  </properties>
   ...
   <!-- Don't inherit license from parent POM -->
   <licenses>
@@ -52,6 +60,10 @@ For Java 11 projects add the following to your POM:
     <relativePath />
   </parent>
   ...
+  <properties>
+    <java.target.version>11</java.target.version>
+  </properties>
+  ...
   <!-- Don't inherit license from parent POM -->
   <licenses>
     <license>
@@ -82,6 +94,11 @@ For Kotlin projects add the following to your POM:
     <version>INSERT VERSION HERE</version>
     <relativePath />
   </parent>
+  ...
+  <properties>
+    <java.require.version>[${java.target.version},9)</java.require.version>
+    <java.target.version>1.8</java.target.version>
+  </properties>
   ...
   <!-- Don't inherit license from parent POM -->
   <licenses>
