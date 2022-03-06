@@ -12,7 +12,6 @@
 
   <modules>
     <module>java-parent</module>
-    <module>java8-parent</module>
     <module>kotlin-parent</module>
   </modules>
 
@@ -788,27 +787,6 @@
   </distributionManagement>
 
   <profiles>
-
-    <profile>
-      <id>pre-java-11</id>
-      <activation>
-        <jdk>[,11)</jdk>
-      </activation>
-      <properties>
-        <fmt-maven-plugin.version>2.9.1</fmt-maven-plugin.version>
-      </properties>
-    </profile>
-
-    <profile>
-      <id>pre-java-9</id>
-      <activation>
-        <jdk>[,9)</jdk>
-      </activation>
-      <properties>
-        <maven.compiler.source>${java.target.version}</maven.compiler.source>
-        <maven.compiler.target>${java.target.version}</maven.compiler.target>
-      </properties>
-    </profile>
 
     <profile>
       <id>post-java-9</id>
