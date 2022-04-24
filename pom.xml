@@ -22,7 +22,7 @@
     <build-helper-maven-plugin.version>3.3.0</build-helper-maven-plugin.version>
     <checkstyle.config-location>https://raw.githubusercontent.com/gantsign/checkstyle-config/3.6.0/checkstyle.xml</checkstyle.config-location>
     <checkstyle.failsOnError>true</checkstyle.failsOnError>
-    <checkstyle.version>10.1</checkstyle.version>
+    <checkstyle.version>10.2</checkstyle.version>
     <docker.image>${project.artifactId}</docker.image>
     <error-prone.version>2.13.1</error-prone.version>
     <extra-enforcer-rules.version>1.5.1</extra-enforcer-rules.version>
