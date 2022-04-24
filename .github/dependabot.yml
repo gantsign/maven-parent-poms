@@ -15,3 +15,10 @@ updates:
   - dependency-name: org.apache.maven.plugins:maven-dependency-plugin
     versions:
     - 3.2.0
+- package-ecosystem: github-actions
+  directory: "/"
+  schedule:
+    interval: weekly
+    day: saturday
+  assignees:
+  - freemanjp
