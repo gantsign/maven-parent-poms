@@ -43,7 +43,7 @@
     <ktlint-maven-plugin.version>1.13.1</ktlint-maven-plugin.version>
     <license-maven-plugin.version>2.0.0</license-maven-plugin.version>
     <logback-classic.version>1.2.11</logback-classic.version>
-    <lombok.version>1.18.22</lombok.version>
+    <lombok.version>1.18.24</lombok.version>
     <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
     <maven-clean-plugin.version>3.2.0</maven-clean-plugin.version>
     <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
