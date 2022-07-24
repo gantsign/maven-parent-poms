@@ -74,7 +74,7 @@
     <reproducible-build-maven-plugin.version>0.15</reproducible-build-maven-plugin.version>
     <revision>development-SNAPSHOT</revision>
     <slf4j.version>1.7.36</slf4j.version>
-    <sortpom-maven-plugin.version>3.1.3</sortpom-maven-plugin.version>
+    <sortpom-maven-plugin.version>3.2.0</sortpom-maven-plugin.version>
     <spotbugs-maven-plugin.version>4.7.0.0</spotbugs-maven-plugin.version>
   </properties>
 
