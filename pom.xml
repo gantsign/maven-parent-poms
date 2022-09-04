@@ -40,7 +40,7 @@
     <kotlin-logging.version>2.1.23</kotlin-logging.version>
     <kotlin.compiler.jvmTarget>${java.target.version}</kotlin.compiler.jvmTarget>
     <kotlin.version>1.7.10</kotlin.version>
-    <ktlint-maven-plugin.version>1.14.0</ktlint-maven-plugin.version>
+    <ktlint-maven-plugin.version>1.15.1</ktlint-maven-plugin.version>
     <license-maven-plugin.version>2.0.0</license-maven-plugin.version>
     <logback-classic.version>1.2.11</logback-classic.version>
     <lombok.version>1.18.24</lombok.version>
