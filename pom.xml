@@ -66,7 +66,7 @@
     <maven-site-plugin.version>3.12.1</maven-site-plugin.version>
     <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
     <maven-surefire.version>3.0.0-M7</maven-surefire.version>
-    <mockito.version>4.7.0</mockito.version>
+    <mockito.version>4.8.0</mockito.version>
     <mockk.version>1.12.7</mockk.version>
     <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
