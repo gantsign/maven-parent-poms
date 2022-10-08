@@ -174,7 +174,67 @@
       </dependency>
       <dependency>
         <groupId>io.mockk</groupId>
+        <artifactId>mockk-agent</artifactId>
+        <version>${mockk.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>io.mockk</groupId>
+        <artifactId>mockk-agent-android</artifactId>
+        <version>${mockk.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>io.mockk</groupId>
+        <artifactId>mockk-agent-api</artifactId>
+        <version>${mockk.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>io.mockk</groupId>
+        <artifactId>mockk-agent-api-jvm</artifactId>
+        <version>${mockk.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>io.mockk</groupId>
+        <artifactId>mockk-agent-jvm</artifactId>
+        <version>${mockk.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>io.mockk</groupId>
+        <artifactId>mockk-android</artifactId>
+        <version>${mockk.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>io.mockk</groupId>
+        <artifactId>mockk-core</artifactId>
+        <version>${mockk.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>io.mockk</groupId>
+        <artifactId>mockk-core-jvm</artifactId>
+        <version>${mockk.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>io.mockk</groupId>
+        <artifactId>mockk-dsl</artifactId>
+        <version>${mockk.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>io.mockk</groupId>
         <artifactId>mockk-dsl-jvm</artifactId>
+        <version>${mockk.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>io.mockk</groupId>
+        <artifactId>mockk-jvm</artifactId>
         <version>${mockk.version}</version>
         <scope>test</scope>
       </dependency>
