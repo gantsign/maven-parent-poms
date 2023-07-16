@@ -19,21 +19,21 @@
     <annotations.version>24.0.1</annotations.version>
     <assertj-guava.version>3.24.2</assertj-guava.version>
     <assertj.version>3.24.2</assertj.version>
-    <build-helper-maven-plugin.version>3.3.0</build-helper-maven-plugin.version>
+    <build-helper-maven-plugin.version>3.4.0</build-helper-maven-plugin.version>
     <checkstyle.config-location>https://raw.githubusercontent.com/gantsign/checkstyle-config/3.8.0/checkstyle.xml</checkstyle.config-location>
     <checkstyle.failsOnError>true</checkstyle.failsOnError>
     <checkstyle.version>10.10.0</checkstyle.version>
     <docker.image>${project.artifactId}</docker.image>
     <error-prone.version>2.18.0</error-prone.version>
     <extra-enforcer-rules.version>1.6.2</extra-enforcer-rules.version>
-    <flatten-maven-plugin.version>1.4.1</flatten-maven-plugin.version>
+    <flatten-maven-plugin.version>1.5.0</flatten-maven-plugin.version>
     <fmt-maven-plugin.version>2.13</fmt-maven-plugin.version>
     <guava.version>31.1-jre</guava.version>
     <jacoco-maven-plugin.version>0.8.10</jacoco-maven-plugin.version>
     <jacoco.file.minimum-coverage-ratio>0.75</jacoco.file.minimum-coverage-ratio>
     <java.target.version>11</java.target.version>
     <jdepend-maven-plugin.version>2.0</jdepend-maven-plugin.version>
-    <jib-maven-plugin.version>3.3.1</jib-maven-plugin.version>
+    <jib-maven-plugin.version>3.3.2</jib-maven-plugin.version>
     <jsr305.version>3.0.2</jsr305.version>
     <junit-jupiter.version>5.9.3</junit-jupiter.version>
     <junit.version>4.13.2</junit.version>
@@ -57,7 +57,7 @@
     <maven-javadoc-plugin.version>3.5.0</maven-javadoc-plugin.version>
     <maven-jdeps-plugin.version>3.1.2</maven-jdeps-plugin.version>
     <maven-jxr-plugin.version>3.3.0</maven-jxr-plugin.version>
-    <maven-plugin-plugin.version>3.8.2</maven-plugin-plugin.version>
+    <maven-plugin-plugin.version>3.9.0</maven-plugin-plugin.version>
     <maven-project-info-reports-plugin.version>3.4.3</maven-project-info-reports-plugin.version>
     <maven-release-plugin.version>3.0.0</maven-release-plugin.version>
     <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
@@ -65,7 +65,7 @@
     <maven-shade-plugin.version>3.4.1</maven-shade-plugin.version>
     <maven-site-plugin.version>3.12.1</maven-site-plugin.version>
     <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
-    <maven-surefire.version>3.0.0</maven-surefire.version>
+    <maven-surefire.version>3.1.0</maven-surefire.version>
     <mockito.version>5.3.1</mockito.version>
     <mockk.version>1.13.5</mockk.version>
     <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
