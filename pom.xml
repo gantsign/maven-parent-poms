@@ -24,7 +24,7 @@
     <checkstyle.failsOnError>true</checkstyle.failsOnError>
     <checkstyle.version>10.12.4</checkstyle.version>
     <docker.image>${project.artifactId}</docker.image>
-    <error-prone.version>2.23.0</error-prone.version>
+    <error-prone.version>2.24.1</error-prone.version>
     <extra-enforcer-rules.version>1.7.0</extra-enforcer-rules.version>
     <flatten-maven-plugin.version>1.5.0</flatten-maven-plugin.version>
     <fmt-maven-plugin.version>2.13</fmt-maven-plugin.version>
