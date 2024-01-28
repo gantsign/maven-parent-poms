@@ -16,7 +16,7 @@
   </modules>
 
   <properties>
-    <annotations.version>24.0.1</annotations.version>
+    <annotations.version>24.1.0</annotations.version>
     <assertj-guava.version>3.25.1</assertj-guava.version>
     <assertj.version>3.25.1</assertj.version>
     <build-helper-maven-plugin.version>3.5.0</build-helper-maven-plugin.version>
