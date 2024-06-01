@@ -23,7 +23,7 @@
     <central-publishing-maven-plugin.version>0.10.0</central-publishing-maven-plugin.version>
     <checkstyle.config-location>https://raw.githubusercontent.com/gantsign/checkstyle-config/3.9.0/checkstyle.xml</checkstyle.config-location>
     <checkstyle.failsOnError>true</checkstyle.failsOnError>
-    <checkstyle.version>10.14.0</checkstyle.version>
+    <checkstyle.version>10.17.0</checkstyle.version>
     <docker.image>${project.artifactId}</docker.image>
     <error-prone.version>2.25.0</error-prone.version>
     <extra-enforcer-rules.version>1.8.0</extra-enforcer-rules.version>
