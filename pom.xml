@@ -653,7 +653,7 @@
             <configuration>
               <rules>
                 <requireMavenVersion>
-                  <version>[3.5.4,3.7)</version>
+                  <version>[3.5.4,3.10)</version>
                 </requireMavenVersion>
                 <!-- When there are multiple versions of a dependency you have to choose which one to use. -->
                 <dependencyConvergence/>
