@@ -259,7 +259,7 @@ headers to your files. To use this plugin you need to configure it e.g.:
             <phase>process-sources</phase>
             <configuration>
               <roots>${basedir}</roots>
-              <includes>.editorconfig,.gitattributes,.travis.yml,pom.xml</includes>
+              <includes>.editorconfig,.gitattributes,pom.xml</includes>
               <extraExtensions>
                 <editorconfig>properties</editorconfig>
                 <gitattributes>properties</gitattributes>
@@ -402,8 +402,8 @@ mvn spotbugs:gui -P find-sec-bugs
 
 #### sign-artifacts
 
-To sign artifacts first you need a GPG key, if you're using Travis CI you can follow
-[this guide](http://www.debonair.io/post/maven-cd/).
+To sign artifacts first you need a GPG key, you can follow
+[this guide](https://central.sonatype.org/publish/requirements/gpg/).
 
 Once you have your GPG key you need to set the following two environment variables:
 
