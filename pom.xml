@@ -835,8 +835,8 @@
   </issueManagement>
 
   <ciManagement>
-    <system>Travis CI</system>
-    <url>https://travis-ci.com/gantsign/maven-parent-poms</url>
+    <system>GitHub Actions</system>
+    <url>https://github.com/gantsign/maven-parent-poms/actions</url>
   </ciManagement>
 
   <profiles>
