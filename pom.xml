@@ -20,6 +20,7 @@
     <assertj-guava.version>3.25.3</assertj-guava.version>
     <assertj.version>3.25.3</assertj.version>
     <build-helper-maven-plugin.version>3.5.0</build-helper-maven-plugin.version>
+    <central-publishing-maven-plugin.version>0.10.0</central-publishing-maven-plugin.version>
     <checkstyle.config-location>https://raw.githubusercontent.com/gantsign/checkstyle-config/3.9.0/checkstyle.xml</checkstyle.config-location>
     <checkstyle.failsOnError>true</checkstyle.failsOnError>
     <checkstyle.version>10.14.0</checkstyle.version>
@@ -68,7 +69,6 @@
     <maven-surefire.version>3.2.5</maven-surefire.version>
     <mockito.version>5.11.0</mockito.version>
     <mockk.version>1.13.10</mockk.version>
-    <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <reproducible-build-maven-plugin.version>0.16</reproducible-build-maven-plugin.version>
@@ -572,9 +572,9 @@
           </executions>
         </plugin>
         <plugin>
-          <groupId>org.sonatype.plugins</groupId>
-          <artifactId>nexus-staging-maven-plugin</artifactId>
-          <version>${nexus-staging-maven-plugin.version}</version>
+          <groupId>org.sonatype.central</groupId>
+          <artifactId>central-publishing-maven-plugin</artifactId>
+          <version>${central-publishing-maven-plugin.version}</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -839,13 +839,6 @@
     <url>https://travis-ci.com/gantsign/maven-parent-poms</url>
   </ciManagement>
 
-  <distributionManagement>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-  </distributionManagement>
-
   <profiles>
 
     <profile>
@@ -1045,17 +1038,17 @@
     </profile>
 
     <profile>
-      <id>ossrh-deploy</id>
+      <id>central-deploy</id>
       <build>
         <plugins>
           <plugin>
-            <groupId>org.sonatype.plugins</groupId>
-            <artifactId>nexus-staging-maven-plugin</artifactId>
+            <groupId>org.sonatype.central</groupId>
+            <artifactId>central-publishing-maven-plugin</artifactId>
             <extensions>true</extensions>
             <configuration>
-              <serverId>ossrh</serverId>
-              <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-              <autoReleaseAfterClose>true</autoReleaseAfterClose>
+              <publishingServerId>central</publishingServerId>
+              <autoPublish>true</autoPublish>
+              <waitUntil>published</waitUntil>
             </configuration>
           </plugin>
         </plugins>
