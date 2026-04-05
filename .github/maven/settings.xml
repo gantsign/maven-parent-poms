@@ -6,9 +6,9 @@
 
   <servers>
     <server>
-      <id>ossrh</id>
-      <username>${env.OSSRH_USER}</username>
-      <password>${env.OSSRH_TOKEN}</password>
+      <id>central</id>
+      <username>${env.CENTRAL_PORTAL_USERNAME}</username>
+      <password>${env.CENTRAL_PORTAL_PASSWORD}</password>
     </server>
   </servers>
 </settings>

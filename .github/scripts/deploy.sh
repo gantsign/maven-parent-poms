@@ -5,7 +5,7 @@ set +x
 
 ./mvnw deploy \
     --settings .github/maven/settings.xml \
-    -P attach-site-descriptor,sign-artifacts,ossrh-deploy \
+    -P attach-site-descriptor,sign-artifacts,central-deploy \
     -DskipTests \
     -Dinvoker.skip=true \
     -Denforce.java-version.skip \

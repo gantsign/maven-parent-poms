@@ -416,12 +416,12 @@ Then activate the `sign-artifacts` profile when you deploy your artifacts e.g.:
 mvn deploy -P sign-artifacts
 ```
 
-#### ossrh-deploy
+#### central-deploy
 
-The process of deploying to Sonatype OSSRH (OSS Repository Hosting) is a bit involved so play close
-attention to [this guide](https://central.sonatype.org/pages/ossrh-guide.html).
+The process of deploying to The Maven Central Repository is a bit involved so play close
+attention to [this guide](https://central.sonatype.org/register/central-portal/).
 
-You need to specify the username and token for the `ossrh` server in your Maven `settings.xml`. This
+You need to specify the username and token for the `central` server in your Maven `settings.xml`. This
 example uses environment variables, which is generally the easiest approach for CI servers:
 
 ```xml
@@ -430,9 +430,9 @@ example uses environment variables, which is generally the easiest approach for 
   <servers>
     ...
     <server>
-      <id>ossrh</id>
-      <username>${env.OSSRH_USER}</username>
-      <password>${env.OSSRH_TOKEN}</password>
+      <id>central</id>
+      <username>${env.CENTRAL_PORTAL_USERNAME}</username>
+      <password>${env.CENTRAL_PORTAL_PASSWORD}</password>
     </server>
     ...
   </servers>
@@ -440,11 +440,11 @@ example uses environment variables, which is generally the easiest approach for 
 </settings>
 ```
 
-Once you've satisfied all the requirements you can deploy to OSSRH by activating the `ossrh-deploy`
-profile e.g.:
+Once you've satisfied all the requirements you can deploy to Maven Central by activating the
+`central-deploy` profile e.g.:
 
 ```bash
-mvn deploy -P sign-artifacts,ossrh-deploy
+mvn deploy -P sign-artifacts,central-deploy
 ```
 
 #### gh-pages

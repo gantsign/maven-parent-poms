@@ -15,7 +15,7 @@ env:
 jobs:
   build:
     name: Maven build
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout
@@ -30,7 +30,7 @@ jobs:
 
   deploy:
     name: Maven deploy
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     needs: build
     steps:
       - name: Checkout
@@ -48,8 +48,8 @@ jobs:
       - name: Deploy with Maven
         run: .github/scripts/deploy.sh
         env:
-          OSSRH_USER: ${{ secrets.OSSRH_USER }}
-          OSSRH_TOKEN: ${{ secrets.OSSRH_TOKEN }}
+          CENTRAL_PORTAL_USERNAME: ${{ secrets.CENTRAL_PORTAL_USERNAME }}
+          CENTRAL_PORTAL_PASSWORD: ${{ secrets.CENTRAL_PORTAL_PASSWORD }}
           GPG_KEY_NAME: ${{ secrets.GPG_KEY_NAME }}
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
       - name: Delete GPG secret key
