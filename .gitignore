@@ -358,3 +358,6 @@ $RECYCLE.BIN/
 
 # Not a Java module
 /.idea/checkstyle-idea.xml
+
+# Devcontainer
+.devpod-internal
